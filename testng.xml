@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Testing Kickstarter Android App">
+    <test name="Recommended Collection Smoke Test">
+        <groups>
+            <run>
+                <include name="Smoke"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="android.AccountTest"></class>
+            <class name="android.ProjectCollections.CollectionsTest"></class>
+            <class name="android.ProjectCollections.RecommendedCollectionTest"></class>
+        </classes>
+    </test>
+</suite>
