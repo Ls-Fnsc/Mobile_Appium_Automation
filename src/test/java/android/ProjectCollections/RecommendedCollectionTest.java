@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class RecommendedCollectionTest extends Base {
 
-    @Test(description = "The user can browse for recommended projects under the Magic tab.")
+    @Test(description = "The user can browse for recommended projects under the Magic tab.", groups = {"recommendedSmokeTest"})
     public static void recommendedCollectionMagicTab() throws InterruptedException {
         //Arrange
         verifyUserLoginStatus();
@@ -20,7 +20,7 @@ public class RecommendedCollectionTest extends Base {
         softAssert.assertEquals(recommendedPage.getProjectListing().isDisplayed(), true, "Verifying a project listing is displayed under the Magic Tab of the Recommended Screen");
     }
 
-    @Test(description = "The user can browse for recommended projects under the Popular tab.")
+    @Test(description = "The user can browse for recommended projects under the Popular tab.", groups = {"recommendedSmokeTest"})
     public static void recommendedCollectionPopularTab() throws InterruptedException {
         //Arrange
         verifyUserLoginStatus();
@@ -34,7 +34,7 @@ public class RecommendedCollectionTest extends Base {
         softAssert.assertEquals(recommendedPage.getProjectListing().isDisplayed(), true, "Verifying a project listing is displayed under the Popular Tab of the Recommended Screen");
     }
 
-    @Test(description = "The user can browse for recommended projects under the Newest tab.")
+    @Test(description = "The user can browse for recommended projects under the Newest tab.", groups = {"recommendedSmokeTest"})
     public static void recommendedCollectionNewestTab() throws InterruptedException {
         //Arrange
         verifyUserLoginStatus();
@@ -48,7 +48,7 @@ public class RecommendedCollectionTest extends Base {
         softAssert.assertEquals(recommendedPage.getProjectListing().isDisplayed(), true, "Verifying a project listing is displayed under the Newest Tab of the Recommended Screen");
     }
 
-    @Test(description = "The user can browse for recommended projects under the Ending Soon tab.")
+    @Test(description = "The user can browse for recommended projects under the Ending Soon tab.", groups = {"recommendedSmokeTest"})
     public static void recommendedCollectionEndingSoonTab() throws InterruptedException {
         //Arrange
         verifyUserLoginStatus();

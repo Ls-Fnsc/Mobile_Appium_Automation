@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class ProjectsWeLoveCollectionTest extends Base {
 
-    @Test(description = "The user can browse for featured projects under the Magic tab.")
+    @Test(description = "The user can browse for featured projects under the Magic tab.", groups = {"projectsWeLoveSmokeTest"})
     public static void allProjectsCollectionMagicTab() throws InterruptedException {
         //Arrange
         verifyUserLoginStatus();
@@ -20,7 +20,7 @@ public class ProjectsWeLoveCollectionTest extends Base {
         softAssert.assertEquals(projectsWeLovePage.getProjectListing().isDisplayed(), true, "Verifying a project listing is displayed under the Magic Tab of the Projects We Love Screen");
     }
 
-    @Test(description = "The user can browse for featured projects under the Popular tab.")
+    @Test(description = "The user can browse for featured projects under the Popular tab.", groups = {"projectsWeLoveSmokeTest"})
     public static void allProjectsCollectionPopularTab() throws InterruptedException {
         //Arrange
         verifyUserLoginStatus();
@@ -34,7 +34,7 @@ public class ProjectsWeLoveCollectionTest extends Base {
         softAssert.assertEquals(projectsWeLovePage.getProjectListing().isDisplayed(), true, "Verifying a project listing is displayed under the Popular Tab of the Projects We Love Screen");
     }
 
-    @Test(description = "The user can browse for featured projects under the Newest tab.")
+    @Test(description = "The user can browse for featured projects under the Newest tab.", groups = {"projectsWeLoveSmokeTest"})
     public static void allProjectsCollectionNewestTab() throws InterruptedException {
         //Arrange
         verifyUserLoginStatus();
@@ -48,7 +48,7 @@ public class ProjectsWeLoveCollectionTest extends Base {
         softAssert.assertEquals(projectsWeLovePage.getProjectListing().isDisplayed(), true, "Verifying a project listing is displayed under the Newest Tab of the Projects We Love Screen");
     }
 
-    @Test(description = "The user can browse for featured projects under the Ending Soon tab.")
+    @Test(description = "The user can browse for featured projects under the Ending Soon tab.", groups = {"projectsWeLoveSmokeTest"})
     public static void allProjectsCollectionEndingSoonTab() throws InterruptedException {
         //Arrange
         verifyUserLoginStatus();

@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class CollectionsTest extends Base {
 
-    @Test(description = "The user can browse projects that are recommended to them based on their activity", groups = {"Smoke"})
+    @Test(description = "The user can browse projects that are recommended to them based on their activity", groups = {"recommendedSmokeTest"})
     public static void recommendedCollection() throws InterruptedException {
         //Arrange
         verifyUserLoginStatus();
@@ -30,7 +30,7 @@ public class CollectionsTest extends Base {
         softAssert.assertEquals(recommendedPage.getEndingSoonTab().getText(), "ENDING SOON", "Verifying Ending Soon Tab's text of Recommended Screen is label correctly");
     }
 
-    @Test(description = "The user can browse all the projects available to fund.")
+    @Test(description = "The user can browse all the projects available to fund.", groups = {"allProjectsSmokeTest"})
     public static void allProjectsCollection() throws InterruptedException {
         //Arrange
         verifyUserLoginStatus();
@@ -54,7 +54,7 @@ public class CollectionsTest extends Base {
         softAssert.assertEquals(allProjectsPage.getEndingSoonTab().getText(), "ENDING SOON", "Verifying Ending Soon Tab's text of All Projects Screen is label correctly");
     }
 
-    @Test(description = "The user can browse for featured projects tagged as Projects We Love.")
+    @Test(description = "The user can browse for featured projects tagged as Projects We Love.", groups = {"projectsWeLoveSmokeTest"})
     public static void projectsWeLoveCollection() throws InterruptedException {
         //Arrange
         verifyUserLoginStatus();
@@ -78,7 +78,7 @@ public class CollectionsTest extends Base {
         softAssert.assertEquals(projectsWeLovePage.getEndingSoonTab().getText(), "ENDING SOON", "Verifying Ending Soon Tab's text of Projects We Love Screen is label correctly");
     }
 
-    @Test(description = "The user can browse previously saved projects.")
+    @Test(description = "The user can browse previously saved projects.", groups = {"savedProjectsSmokeTest"})
     public static void savedProjectsCollection() throws InterruptedException {
         //Arrange
         verifyUserLoginStatus();
