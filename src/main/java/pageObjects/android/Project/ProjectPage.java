@@ -69,6 +69,20 @@ public class ProjectPage extends Base {
         return element;
     }
 
+    public static AndroidElement getShareViewHeader() {
+        String xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.RelativeLayout";
+        common.waitForXPathElement(xpath, 10);
+        AndroidElement element = (AndroidElement) driver.findElementByXPath(xpath);
+        return element;
+    }
+
+    public static AndroidElement getShareViewTitle() {
+        String xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.RelativeLayout/android.widget.TextView";
+        common.waitForXPathElement(xpath, 10);
+        AndroidElement element = (AndroidElement) driver.findElementByXPath(xpath);
+        return element;
+    }
+
     //Interacting with elements on the page
     public static void tapBackButton() {
         getBackButton().click();

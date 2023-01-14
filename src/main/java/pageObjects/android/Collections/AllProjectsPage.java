@@ -76,4 +76,8 @@ public class AllProjectsPage extends Base {
         getSignInButton().click();
     }
 
+    public static void tapProjectListing() {
+        getProjectListing().click();
+    }
+
 }

@@ -2,32 +2,28 @@ package android.Project;
 
 import android.AccountTest;
 import com.framework.base.android.Base;
+import com.framework.base.android.Common;
 import org.testng.annotations.Test;
 
 public class ProjectTest extends Base {
 
-    @Test(description = "The user can reproduce an introductory video to learn more about that specific project.")
-    public void projectVideoPlayback() throws InterruptedException {
+    @Test (description = "The user can share a project on various websites and social media platforms.")
+    public void shareProject() throws InterruptedException {
         //Arrange
         verifyUserLoginStatus();
         headerPage.tapMenuButton();
-        menuPage.tapRecommendedCollectionButton();
-        recommendedPage.tapMagicTab();
+        menuPage.tapAllProjectsCollectionButton();
+        allProjectsPage.tapMagicTab();
 
         //Act
-        recommendedPage.tapProjectListing();
-        projectPage.tapPlayVideoButton();
-        videoPlaybackPage.tapVideoFrame();
+        allProjectsPage.tapProjectListing();
+        projectPage.tapShareButton();
 
         //Assert
-        softAssert.assertEquals(videoPlaybackPage.getPlayerControls().isDisplayed(), "true", "Verifying the video played by checking video controls");
+        softAssert.assertEquals(projectPage.getShareViewTitle().getText(), "Share", "Verifying the Share view is displayed");
 
+        common.swipeScreen(Common.Direction.DOWN, projectPage.getShareViewHeader().getLocation().x, projectPage.getShareViewHeader().getLocation().y);
         projectPage.tapBackButton();
-    }
-
-    @Test (description = "The user can share the project on various websites and social media platforms.")
-    public void shareProject() {
-
     }
 
     /*
